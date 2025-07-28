@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 2</title>
+  </head>
+  <body>
+    <a href="../lesson-2.html">Lesson-2</a>
+
+    <!-- ! Номер задачі -->
+    <h1>Задача 2</h1>
+
+    <!-- ! Умова -->
+    <p>Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість років.</p>
+
+    <!-- ! Розв'язок -->
+    <script>
+      const currentYear = 2025;
+      const birthYear = parseInt(prompt("Який рік народження?", 2000));
+
+      document.write(`<p>Якщо ви народились <b>1 січня ${birthYear} року</b>, то вам вже <b>${currentYear - birthYear} років</b></p>`);
+    </script>
+  </body>
+</html>

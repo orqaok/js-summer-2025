@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 3</title>
+  </head>
+  <body>
+    <a href="../lesson-2.html">Lesson-2</a>
+
+    <!-- ! Номер задачі -->
+    <h1>Задача 3</h1>
+
+    <!-- ! Умова -->
+    <p>Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).</p>
+
+    <!-- ! Розв'язок -->
+    <script>
+      const VAT = 5;
+
+      const productPrice = parseFloat(prompt("Ціна за одиницю товара, в грн:", 10));
+      const productCount = parseInt(prompt("Скільки одиниць товару, в шт:", 2));
+      const productCart = productPrice * productCount;
+      const productCartVAT = (productCart / 100) * VAT;
+
+      document.write("Загальна вартість всього: ", productCart, " грн. (ПДВ: ", productCartVAT.toFixed(2), " грн.)");
+    </script>
+  </body>
+</html>

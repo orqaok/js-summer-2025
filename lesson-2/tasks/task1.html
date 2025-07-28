@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 0</title>
+  </head>
+  <body>
+    <a href="../lesson-2.html">Lesson-2</a>
+
+    <!-- ! Номер задачі -->
+    <h1>Задача 0</h1>
+
+    <!-- ! Умова -->
+    <p>Обчислити значення виразів</p>
+    <img src="../images/task1.png" alt="Задача 0" width="200" />
+
+    <!-- ! Розв'язок -->
+    <script>
+      const a = parseInt(prompt("Введіть число 'a'", "1"));
+      const b = parseInt(prompt("Введіть число 'b'", 2));
+      const c = parseInt(prompt("Введіть число 'c'", 3));
+
+      document.write(`<br>
+      -----<br>
+      a = ${a}<br>
+      b = ${b}<br>
+      c = ${c}<br>
+      -----<br> 
+      `);
+
+      // * S1
+      const s1 = parseFloat((a + 12 + b).toFixed(2));
+      document.write("1) s1 = ", s1, "<br>");
+
+      // * S2
+      const s2 = parseFloat(Math.sqrt((a + b) / (2 * a)).toFixed(2));
+      document.write("2) s2 = ", s2, "<br>");
+
+      // * S3
+      const s3 = parseFloat(Math.cbrt((a + b) * c).toFixed(2));
+      document.write("3) s3 = ", s3, "<br>");
+
+      // * S4
+      const s4 = parseFloat(Math.sin(a + -b).toFixed(2));
+      document.write("4) s4 = ", s4);
+    </script>
+  </body>
+</html>
