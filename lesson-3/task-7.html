@@ -16,18 +16,58 @@
 
     <!-- ! Розв'язок -->
     <script>
-      const numberOfMonths = parseInt(prompt("Введіть номер місяця, від 1 до 12", 1))
+      const numberOfMonths = parseInt(prompt("Введіть номер місяця, від 1 до 12", 1));
 
-      if (numberOfMonths > 0 && numberOfMonths <= 3) 
-        document.write(`<b>${numberOfMonths}</b> місяця це <b>Зима</b>`)
-      else if (numberOfMonths >= 3 && numberOfMonths <= 6) 
-        document.write(`<b>${numberOfMonths}</b> місяця це <b>Весна</b>`)
-      else if (numberOfMonths >= 6 && numberOfMonths <= 9) 
-        document.write(`<b>${numberOfMonths}</b> місяця це <b>Літо</b>`)
-      else if (numberOfMonths >= 9 && numberOfMonths <= 12) 
-        document.write(`<b>${numberOfMonths}</b> місяця це <b>Осінь</b>`)
-      else 
-        document.write('Місяців лише <b>12</b>!')
+      // Пори року
+      const WINTER = 'Зима';
+      const SPRING = 'Весна';
+      const SUMMER = 'Літо';
+      const AUTUMN = 'Осінь';
+
+      let nameOfSeason;
+
+      switch (numberOfMonths) {
+        case 1:
+          nameOfSeason = WINTER;
+          break;
+        case 2:
+          nameOfSeason = WINTER;
+          break;
+        case 3:
+          nameOfSeason = SPRING;
+          break;
+        case 4:
+          nameOfSeason = SPRING;
+          break;
+        case 5:
+          nameOfSeason = SPRING;
+          break;
+        case 6:
+          nameOfSeason = SUMMER;
+          break;
+        case 7:
+          nameOfSeason = SUMMER;
+          break;
+        case 8:
+          nameOfSeason = SUMMER;
+          break;
+        case 9:
+          nameOfSeason = AUTUMN;
+          break;
+        case 10:
+          nameOfSeason = AUTUMN;
+          break;
+        case 11:
+          nameOfSeason = AUTUMN;
+          break;
+        case 12:
+          nameOfSeason = WINTER;
+          break;
+        default:
+          break;
+      }
+
+      numberOfMonths > 0 && numberOfMonths < 13 ? document.write(`<b>${numberOfMonths}/12</b> це <b>${nameOfSeason}</b>`) : document.write('Місяців лише 12!');
     </script>
   </body>
 </html>
