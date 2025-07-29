@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 3. Урок 3</title>
+  </head>
+  <body>
+    <a href="./lesson-3.html">Урок 3</a>
+
+    <!-- * Номер задачі -->
+    <h1>Задача 3</h1>
+
+    <!-- ? Умова -->
+    <p>Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.</p>
+
+    <!-- ! Розв'язок -->
+    <script>
+      const RANDOM_NUMBER = Math.floor(Math.random() * 5 + 1);
+
+      let yourNumber = parseInt(prompt("Спробуйте вгадати число за дві спроби, від 1 до 5", 1));
+
+      if (yourNumber == RANDOM_NUMBER) 
+        document.write(`Вітаю! Число <b>${yourNumber}</b> вгадали з першого разу.`);
+      else if (yourNumber !== RANDOM_NUMBER) {
+        if (yourNumber > 5 || yourNumber < 1)
+          yourNumber = parseInt(prompt(`Уважніше, число від 1 до 5, число ${yourNumber} не вірне. Маєте ще одну спробу`, 1));
+        else if (isNaN(yourNumber))
+          yourNumber = parseInt(prompt(`Це взагалі не число! Маєте ще одну спробу`, 1));
+        else
+          yourNumber = parseInt(prompt(`Маєте ще одну спробу, число ${yourNumber} не вірне`, 1));
+          if (yourNumber == RANDOM_NUMBER) 
+            document.write(`Супер! Ви відгадали число <b>${yourNumber}</b> з другої спроби.`);
+          else 
+            document.write('Нажаль не вгадали за дві спроби. Тисніть "F5" і спробуйте спочатку.');
+      } 
+      else 
+        document.write('Нажаль не вгадали за дві спроби. Тисніть "F5" і спробуйте спочатку.');
+    </script>
+  </body>
+</html>

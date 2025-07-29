@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 6. Урок 3</title>
+  </head>
+  <body>
+    <a href="./lesson-3.html">Урок 3</a>
+
+    <!-- * Номер задачі -->
+    <h1>Задача 6</h1>
+
+    <!-- ? Умова -->
+    <p>З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.</p>
+
+    <!-- ! Розв'язок -->
+    <script>
+      const numberOfDay = parseInt(prompt("Введіть номер для тижня: від 1 до 7", 1))
+
+      //Weekdays
+      const MONDAY = "Понеділок";
+      const TUESDAY = "Вівторок"; 
+      const WEDNESDAY = "Середа";
+      const THURSDAY = "Четвер";
+      const FRIDAY = "П'ятниця";
+      const SATURDAY = "Субота";
+      const SUNDAY = "Неділя";
+
+      let dayOfWeek;
+
+      switch (numberOfDay) {
+        case 1 : dayOfWeek = MONDAY;
+          break;
+        case 2 : dayOfWeek = TUESDAY;
+          break;
+        case 3 : dayOfWeek = WEDNESDAY;
+          break;
+        case 4 : dayOfWeek = THURSDAY;
+          break;
+        case 5 : dayOfWeek = FRIDAY;
+          break;
+        case 6 : dayOfWeek = SATURDAY;
+          break;
+        case 7 : dayOfWeek = SUNDAY; 
+          break;
+        default: dayOfWeek = "Нема такого номера у дня тижня!";
+      }
+
+      numberOfDay > 7 || numberOfDay < 1 ? document.write(dayOfWeek) : document.write(`<b>${numberOfDay} день</b> тижня це ${dayOfWeek}`);
+
+    </script>
+  </body>
+</html>

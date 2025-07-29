@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 5. Урок 3</title>
+  </head>
+  <body>
+    <a href="./lesson-3.html">Урок 3</a>
+
+    <!-- * Номер задачі -->
+    <h1>Задача 5</h1>
+
+    <!-- ? Умова -->
+    <p>З клавіатури вводиться назва категорії водія (А-мотоцикл, В-легковий автомобіль, С-вантажний автомобіль). Вивести на екран назву транспортного засобу, яким він може керувати.</p>
+
+    <!-- ! Розв'язок -->
+    <script>
+      let autoLicenseCategory = prompt("Введіть категорію водія: A, B чи C", "B");
+
+      // Якщо ввели мовою uk / eng
+      if (autoLicenseCategory == "а" || autoLicenseCategory == "А" || autoLicenseCategory == "a" || autoLicenseCategory == "A") 
+        document.write(`<b>Категорія A</b>, дає право керувати мотоциклом.`);
+      else if (autoLicenseCategory == "б" || autoLicenseCategory == "Б" || autoLicenseCategory == "b" || autoLicenseCategory == "B") 
+        document.write(`<b>Категорія B</b>, дає право керувати легковим автомобілем.`);
+      else if (autoLicenseCategory == "с" || autoLicenseCategory == "С" || autoLicenseCategory == "c" || autoLicenseCategory == "C") 
+        document.write(`<b>Категорія C</b>, дає право керувати вантажним автомобілем.`);
+      else 
+        document.write("Можна ввести лише три категорії: A, B чи C");
+    </script>
+  </body>
+</html>

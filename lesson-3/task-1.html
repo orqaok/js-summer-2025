@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 1. Урок 3</title>
+  </head>
+  <body>
+    <a href="./lesson-3.html">Урок 3</a>
+
+    <!-- * Номер задачі -->
+    <h1>Задача 1</h1>
+
+    <!-- ? Умова -->
+    <p>З клавіатури вводяться імена двох дітей та кількість у них цукерок. Вивести не екран ім’я тієї дитини, у якої кількість цукерок є більшою, або вивести, що кількість однакова</p>
+
+    <!-- ! Розв'язок -->
+    <script>
+      // Child 1
+      const nameChild1 = prompt("Введіть ім'я першої дитини", "Оля")
+      const countCandyChild1 = prompt(`Скільки ${nameChild1} має цукерок, шт?`, 1);
+      // Child 2
+      const nameChild2 = prompt("Введіть ім'я другої дитини", "Рома")
+      const countCandyChild2 = prompt(`Скільки ${nameChild2} має цукерок, шт?`, 2);
+
+      if (countCandyChild1 > countCandyChild2) 
+        document.write(`<b>${nameChild1}</b> має найбільше цукерок!`);
+      else if (countCandyChild1 < countCandyChild2) 
+        document.write(`<b>${nameChild2}</b> має найбільше цукерок!`);
+      else
+        document.write(`<b>${nameChild1}</b> та <b>${nameChild2}</b> мають однаково цукерок!`);
+
+    </script>
+  </body>
+</html>

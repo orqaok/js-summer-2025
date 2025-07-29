@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 7. Урок 3</title>
+  </head>
+  <body>
+    <a href="./lesson-3.html">Урок 3</a>
+
+    <!-- * Номер задачі -->
+    <h1>Задача 7</h1>
+
+    <!-- ? Умова -->
+    <p>З клавіатури вводиться номер місяця. Вивести до якої пори він відноситься</p>
+
+    <!-- ! Розв'язок -->
+    <script>
+      const numberOfMonths = parseInt(prompt("Введіть номер місяця, від 1 до 12", 1))
+
+      if (numberOfMonths > 0 && numberOfMonths <= 3) 
+        document.write(`<b>${numberOfMonths}</b> місяця це <b>Зима</b>`)
+      else if (numberOfMonths >= 3 && numberOfMonths <= 6) 
+        document.write(`<b>${numberOfMonths}</b> місяця це <b>Весна</b>`)
+      else if (numberOfMonths >= 6 && numberOfMonths <= 9) 
+        document.write(`<b>${numberOfMonths}</b> місяця це <b>Літо</b>`)
+      else if (numberOfMonths >= 9 && numberOfMonths <= 12) 
+        document.write(`<b>${numberOfMonths}</b> місяця це <b>Осінь</b>`)
+      else 
+        document.write('Місяців лише <b>12</b>!')
+    </script>
+  </body>
+</html>
