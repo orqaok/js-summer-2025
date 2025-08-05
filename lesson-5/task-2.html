@@ -16,13 +16,13 @@
 
     <!-- ! Розв'язок -->
     <script>
-      let numberOfSeason = 3;
+      if (confirm("Почати тестування?")) {
+        let numberOfSeason = 3;
 
-      while (numberOfSeason <= 8) {
-        if (numberOfSeason < 6) 
-          document.write(`ЛІТО - ${numberOfSeason++}<br>`);
-        else 
-          document.write(`ВЕСНА - ${numberOfSeason++}<br>`);
+        while (numberOfSeason <= 8) {
+          if (numberOfSeason < 6) document.write(`ЛІТО - ${numberOfSeason++}<br>`);
+          else document.write(`ВЕСНА - ${numberOfSeason++}<br>`);
+        }
       }
     </script>
   </body>

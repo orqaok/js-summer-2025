@@ -16,9 +16,11 @@
 
     <!-- ! Розв'язок -->
     <script>
-      for (let i = 1; i <= 10; i++) {
-        let priceProduct = parseFloat(prompt(`Ціна продукта №${i}`, 100));
-        document.write(`${i}) Продукт №${i}. ЦІНА = ${priceProduct} грн.<br>`);
+      if (confirm("Почати тестування?")) {
+        for (let i = 1; i <= 10; i++) {
+          let priceProduct = parseFloat(prompt(`Ціна продукта №${i}`, 100));
+          document.write(`${i}) Продукт №${i}. ЦІНА = ${priceProduct} грн.<br>`);
+        }
       }
     </script>
   </body>

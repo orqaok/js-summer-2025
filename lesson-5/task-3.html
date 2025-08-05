@@ -16,9 +16,11 @@
 
     <!-- ! Розв'язок -->
     <script>
-      let index = 1;
-      while (index <= 8) {
-        document.write(`${index++}) <button>Hello</button> `);
+      if (confirm("Почати тестування?")) {
+        let index = 1;
+        while (index <= 8) {
+          document.write(`${index++}) <button>Hello</button> `);
+        }
       }
     </script>
   </body>

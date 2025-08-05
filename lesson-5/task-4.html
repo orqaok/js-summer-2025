@@ -16,12 +16,14 @@
 
     <!-- ! Розв'язок -->
     <script>
-      const countNumber = parseInt(prompt("Кількість випадкових чисел", 1));
-      document.write(`Випадкових чисел: <b>${countNumber}</b><br>`);
+      if (confirm("Почати тестування?")) {
+        const countNumber = parseInt(prompt("Кількість випадкових чисел", 1));
+        document.write(`Випадкових чисел: <b>${countNumber}</b><br>`);
 
-      for (let i = 1; i <= countNumber; i++) {
-        let randomNumber = 1 + Math.floor(Math.random() * 100);
-        document.write(`${i}) ${randomNumber} <br>`);
+        for (let i = 1; i <= countNumber; i++) {
+          let randomNumber = 1 + Math.floor(Math.random() * 100);
+          document.write(`${i}) ${randomNumber} <br>`);
+        }
       }
     </script>
   </body>

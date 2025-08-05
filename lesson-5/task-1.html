@@ -15,23 +15,24 @@
     <p>Поступово генерувати 100 випадкових чисел від 1 до 1000. Підрахувати яких чисел більше: парних чи непарних</p>
 
     <!-- ! Розв'язок -->
-
     <script>
-      let evenNumber = 0,
-        oddNumber;
+      if (confirm("Почати тестування?")) {
+        let evenNumber = 0,
+          oddNumber;
 
-      for (let num = 1; num <= 100; num++) {
-        let randomNum = 1 + Math.floor(Math.random() * 1000);
-        if (randomNum % 2 == !0) {
-          evenNumber++;
+        for (let num = 1; num <= 100; num++) {
+          let randomNum = 1 + Math.floor(Math.random() * 1000);
+          if (randomNum % 2 == !0) {
+            evenNumber++;
+          }
         }
+
+        oddNumber = 100 - evenNumber;
+
+        if (evenNumber > oddNumber) document.write(`(Парних ${evenNumber}) > (Непарних ${oddNumber})`);
+        else if (evenNumber < oddNumber) document.write(`(Парних ${evenNumber}) < (Непарних ${oddNumber})`);
+        else document.write(`(Парних ${evenNumber}) = (Непарних ${oddNumber})`);
       }
-
-      oddNumber = 100 - evenNumber;
-
-      if (evenNumber > oddNumber) document.write(`(Парних ${evenNumber}) > (Непарних ${oddNumber})`);
-      else if (evenNumber < oddNumber) document.write(`(Парних ${evenNumber}) < (Непарних ${oddNumber})`);
-      else document.write(`(Парних ${evenNumber}) = (Непарних ${oddNumber})`);
     </script>
   </body>
 </html>
