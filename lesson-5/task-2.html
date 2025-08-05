@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача -1. Урок 5</title>
+  </head>
+  <body>
+    <a href="./lesson-5.html">Урок 5</a>
+
+    <!-- * Номер задачі -->
+    <h1>Задача -1</h1>
+
+    <!-- ? Умова -->
+    <p>Вивести на екран номери місяців весни і літа (від 3 до 8)</p>
+
+    <!-- ! Розв'язок -->
+    <script>
+      let numberOfSeason = 3;
+
+      while (numberOfSeason <= 8) {
+        if (numberOfSeason < 6) 
+          document.write(`ЛІТО - ${numberOfSeason++}<br>`);
+        else 
+          document.write(`ВЕСНА - ${numberOfSeason++}<br>`);
+      }
+    </script>
+  </body>
+</html>
