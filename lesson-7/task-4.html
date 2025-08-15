@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 4. Урок 7</title>
+  </head>
+  <body>
+    <a href="./lesson-7.html">Урок 7</a>
+
+    <!-- * Номер задачі -->
+    <h1>Задача 4</h1>
+
+    <!-- ? Умова -->
+    <p>Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: кількість парних, кількість додатних, кількість більших за 100.</p>
+
+    <!-- ! Розв'язок -->
+    <script>
+      if (confirm("Почати тестування?")) {
+        //3 числа a, b, c
+        let a = parseInt(prompt("Введіть перше число", 1));
+        let b = parseInt(prompt("Введіть друге число", 2));
+        let c = parseInt(prompt("Введіть третє число", 3));
+
+        function someNumbers(a, b, c) {
+          let oddNum = 0;
+          let plusNum = 0;
+          let more100Num = 0;
+
+          if (a % 2 === 0) oddNum++;
+          if (a > 0) plusNum++;
+          if (a > 100) more100Num++;
+          if (b % 2 === 0) oddNum++;
+          if (b > 0) plusNum++;
+          if (b > 100) more100Num++;
+          if (c % 2 === 0) oddNum++;
+          if (c > 0) plusNum++;
+          if (c > 100) more100Num++;
+
+          document.write(`Кількість парних: ${oddNum};<br>
+          Кількість додатних: ${plusNum};<br>
+          Кількість >100: ${more100Num}.`);
+        }
+        someNumbers(a, b, c);
+      }
+    </script>
+  </body>
+</html>

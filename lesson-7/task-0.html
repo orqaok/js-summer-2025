@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 0. Урок 7</title>
+  </head>
+  <body>
+    <a href="./lesson-7.html">Урок 7</a>
+
+    <!-- * Номер задачі -->
+    <h1>Задача 0</h1>
+
+    <!-- ? Умова -->
+    <p>Створити функцію, яка за номером місяця повертає пору року, до якої відноситься цей місяць.</p>
+
+    <!-- ! Розв'язок -->
+    <script>
+      if (confirm("Почати тестування?")) {
+        function nameSeason() {
+          let numMonth = parseInt(prompt("Введіть номер місяця ві 1 до 12", 1));
+          switch (numMonth) {
+            case 12:
+            case 1:
+            case 2:
+              return document.write("Зима");
+              break;
+            case 3:
+            case 4:
+            case 5:
+              return document.write("Весна");
+              break;
+            case 6:
+            case 7:
+            case 8:
+              return document.write("Літо");
+              break;
+            case 9:
+            case 10:
+            case 11:
+              return document.write("Осінь");
+              break;
+            default:
+              return document.write("Номер місяця від 1 до 12");
+              break;
+          }
+        }
+        nameSeason();
+      }
+    </script>
+  </body>
+</html>

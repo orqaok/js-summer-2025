@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 3. Урок 7</title>
+  </head>
+  <body>
+    <a href="./lesson-7.html">Урок 7</a>
+
+    <!-- * Номер задачі -->
+    <h1>Задача 3</h1>
+
+    <!-- ? Умова -->
+    <p>Створити окремі функції, які для 4 чисел знаходять:
+      <ol>
+        <li>суму</li>
+        <li>добуток</li>
+        <li>середнє арифметичне</li>
+        <li>мінімальне значення</li>
+      </ol>
+    </p>
+
+    <!-- ! Розв'язок -->
+    <script>
+      if (confirm('Почати тестування?')) {
+        let num1 = parseInt(prompt("Введіть перше число", 1)),
+          num2 = parseInt(prompt("Введіть друге число", 1)),
+          num3 = parseInt(prompt("Введіть третє число", 1)),
+          num4 = parseInt(prompt("Введіть четверте число", 1));
+
+        sumNum = (num1, num2, num3, num4) => num1 + num2 + num3 + num4, 
+        productNum = (num1, num2, num3, num4) => num1 * num2 * num3 * num4, 
+        arithmeticNum = (num1, num2, num3, num4) => (num1 + num2 + num3 + num4) / 4, 
+        minNum = (num1, num2, num3, num4) => Math.min(num1, num2, num3, num4);
+
+        document.write(`<ol>`);
+        document.write(`<li>${num1}+${num2}+${num3}+${num4}=${sumNum(num1, num2, num3, num4)}</li>`);
+        document.write(`<li>${num1}*${num2}*${num3}*${num4}=${productNum(num1, num2, num3, num4)}</li>`);
+        document.write(`<li>(${num1}+${num2}+${num3}+${num4})/4=${arithmeticNum(num1, num2, num3, num4)}</li>`);
+        document.write(`<li>${num1};${num2};${num3};${num4}=>Мінімальне=>${minNum(num1, num2, num3, num4)}</li>`);
+        document.write(`</ol>`);
+      }
+    </script>
+  </body>
+</html>

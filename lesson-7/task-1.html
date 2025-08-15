@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 1. Урок 7</title>
+  </head>
+  <body>
+    <a href="./lesson-7.html">Урок 7</a>
+
+    <!-- * Номер задачі -->
+    <h1>Задача 1</h1>
+
+    <!-- ? Умова -->
+    <p>Створити функцію, яка за номером місяця повертає його назву.</p>
+
+    <!-- ! Розв'язок -->
+    <script>
+      if (confirm("Почати тестування?")) {
+        function nameMonth() {
+          let numMonth = parseInt(prompt("Введіть номер місяця від 1 до 12", 1));
+          if (numMonth === 1) return document.write("Січень");
+          else if (numMonth === 2) return document.write("Лютий");
+          else if (numMonth === 3) return document.write("Березень");
+          else if (numMonth === 4) return document.write("Квітень");
+          else if (numMonth === 5) return document.write("Травень");
+          else if (numMonth === 6) return document.write("Червень");
+          else if (numMonth === 7) return document.write("Липень");
+          else if (numMonth === 8) return document.write("Серпень");
+          else if (numMonth === 9) return document.write("Вересень");
+          else if (numMonth === 10) return document.write("Жовтень");
+          else if (numMonth === 11) return document.write("Листопад");
+          else if (numMonth === 12) return document.write("Грудень");
+          else document.write("Номер місяця від 1 до 12");
+        }
+        nameMonth();
+      }
+    </script>
+  </body>
+</html>
