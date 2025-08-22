@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 3. Урок 8</title>
+  </head>
+  <body>
+    <a href="./lesson-8.html">Урок 8</a>
+
+    <!-- * Номер задачі -->
+    <h1>Задача 3</h1>
+
+    <!-- ? Умова -->
+    <p>Дано масив імен учнів. З’ясувати скільки разів зустрічається ім’я «Іван».</p>
+
+    <!-- ! Розв'язок -->
+
+    <script>
+      if (confirm("Почати тестування?")) {
+        let nameList = ["Оля", "Іван", "Коля", "Рома", "Іван", "Віка"];
+        let countName = 0;
+        for (let index = 0; index < nameList.length; index++) {
+          if (nameList[index] === "Іван") countName++;
+        }
+        console.log(countName);
+      }
+    </script>
+  </body>
+</html>

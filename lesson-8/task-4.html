@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 4. Урок 8</title>
+  </head>
+  <body>
+    <a href="./lesson-8.html">Урок 8</a>
+
+    <!-- * Номер задачі -->
+    <h1>Задача 4</h1>
+
+    <!-- ? Умова -->
+    <p>
+      Дано послідовність номерів автомобілів. Підрахувати кількість номерів, які :<br />
+      • починаються на букву «А»;<br />
+      • перша і остання літери співпадають;<br />
+      • складаються з більше ніш 5 символів;
+    </p>
+
+    <!-- ! Розв'язок -->
+    <script>
+      if (confirm("Почати тестування?")) {
+        let autoNumber = ["EC1234AH", "AA23423AA", "ACA", "AD2312DD"];
+        document.write(`<h3>Дано послідовність номерів автомобілів:</h3> <p>${autoNumber}</p>`);
+
+        // починаються на А
+        let autoNumberFirstLetterA = [];
+
+        for (let index = 0; index < autoNumber.length; index++) {
+          let firstLetter = autoNumber[index][0];
+          if (firstLetter === "A") {
+            autoNumberFirstLetterA.push(autoNumber[index]);
+          }
+        }
+        document.write(`<h3>починаються на букву «А»:</h3> <p>${autoNumberFirstLetterA}</p>`);
+
+        //перша, остання співпадають
+        let firstLetterLastLetterIdentical = [];
+
+        for (let index = 0; index < autoNumber.length; index++) {
+          let firstLetter = autoNumber[index][0];
+          let lastLetter = autoNumber[index][autoNumber[index].length - 1];
+          if (firstLetter === lastLetter) {
+            firstLetterLastLetterIdentical.push(autoNumber[index]);
+          }
+        }
+        document.write(`<h3>Перша і остання літери співпадають</h3> <p>${firstLetterLastLetterIdentical}</p>`);
+
+        //>5 символів
+        let moreFiveSymbol = [];
+
+        for (let index = 0; index < autoNumber.length; index++) {
+          if (autoNumber[index].length > 5) {
+            moreFiveSymbol.push(autoNumber[index]);
+          }
+        }
+        document.write(`<h3>складаються з більше ніш 5 символів</h3> <p>${moreFiveSymbol}</p>`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 5. Урок 8</title>
+  </head>
+  <body>
+    <a href="./lesson-8.html">Урок 8</a>
+
+    <!-- * Номер задачі -->
+    <h1>Задача 5</h1>
+
+    <!-- ? Умова -->
+    <p>
+      Дано послідовність оцінок учня. Підрахувати кількість:<br />
+      1) двійок<br />
+      2) кількість хороших оцінок (добре, відмінно);<br />
+      3) кількість оцінок, які нижче середнього.
+    </p>
+
+    <!-- ! Розв'язок -->
+    <script>
+      if (confirm("Почати тестування?")) {
+        //рандомні оцінки
+        let someNum = 2 + Math.floor(Math.random() * 4);
+
+        let gradeList = [];
+
+        for (let index = 1; index <= someNum; index++) {
+          let someGrade = 2 + Math.floor(Math.random() * 4);
+          gradeList.push(someGrade);
+        }
+
+        document.write(`<h3>Оцінки учня:</h3> <p>${gradeList}</p>`);
+
+        //підрахунок двійок
+        let grade2 = 0;
+
+        for (let index = 0; index < gradeList.length; index++) {
+          if (gradeList[index] === 2) grade2++;
+        }
+
+        document.write(`<h3>Двійок:</h3> <p>${grade2}</p>`);
+
+        //кількість оцінок 4 і 5
+        let grade4_5 = 0;
+
+        for (let index = 0; index < gradeList.length; index++) {
+          if (gradeList[index] === 4 || gradeList[index] === 5) grade4_5++;
+        }
+
+        document.write(`<h3>Хороших оцінок:</h3> <p>${grade4_5}</p>`);
+
+        //кількість нижче середнього
+        let grade3_min = 0;
+
+        for (let index = 0; index < gradeList.length; index++) {
+          if (gradeList[index] < 4) grade3_min++;
+        }
+
+        document.write(`<h3>Нижче середнього:</h3> <p>${grade3_min}</p>`);
+      }
+    </script>
+  </body>
+</html>

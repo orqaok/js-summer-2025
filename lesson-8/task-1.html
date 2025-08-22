@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 1. Урок 8</title>
+  </head>
+  <body>
+    <a href="./lesson-8.html">Урок 8</a>
+
+    <!-- * Номер задачі -->
+    <h1>Задача 1</h1>
+
+    <!-- ? Умова -->
+    <p>Дано масив, який містить оцінки з К предметів. Знайти середній бал і з’ясувати до якої категорії він відноситься (відмінник, двійочник (має хоча би одну двійку), хорошист (оцінки добре і відмінно), трійочник(є хоча би одна трійка)).</p>
+
+    <!-- ! Розв'язок -->
+    <script>
+      if (confirm("Почати тестування?")) {
+        // отримуємо масив з оцінками
+        let grades = [];
+
+        let countLessons = parseInt(prompt('Скільки предметів "K"?', 3));
+
+        for (let lesson = 1; lesson <= countLessons; lesson++) {
+          let grade = parseInt(prompt(`Вкажіть оцінку предмета ${lesson}`, 5));
+          grades.push(grade);
+        }
+
+        document.write(`<p>Оцінки: ${grades}</p>`);
+
+        // середній бал
+        let middleGrade = 0;
+
+        for (let index = 0; index < grades.length; index++) {
+          middleGrade += grades[index];
+        }
+
+        middleGrade = Math.round((middleGrade / grades.length) * 10) / 10;
+
+        document.write(`<p>Середній бал: ${middleGrade}</p>`);
+
+        // категорія оцінки
+        let minGrade = Infinity;
+
+        for (let grade = 0; grade < grades.length; grade++) {
+          if (grades[grade] < minGrade) minGrade = grades[grade];
+        }
+
+        let categoryGrades = "";
+
+        switch (minGrade) {
+          case 2:
+            categoryGrades = "Двієчник";
+            break;
+          case 3:
+            categoryGrades = "Трієчник";
+            break;
+          case 4:
+            categoryGrades = "Хорошист";
+            break;
+          case 5:
+            categoryGrades = "Відмінник";
+            break;
+          default:
+            break;
+        }
+        document.write(`<p>Категорія: ${categoryGrades}</p>`);
+      }
+    </script>
+  </body>
+</html>
